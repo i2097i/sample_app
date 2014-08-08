@@ -1,4 +1,6 @@
 
+I am only writing this for my own goddamn benefit. If it helps anybody else along the way...fine. 
+
 #initialize new application without default tests
 rails new sample_app -T
 
@@ -17,7 +19,8 @@ end
 
 gem 'rails_12factor' # needed for heroku
 
-Also, add the file public/index.html as there is no root production route set by default by the 'rails new' command. It will work on your local system but not on heroku.
+Also, create a new file public/index.html as there is no default root route for production
+set by the 'rails new' command. It will work on your local system but not on heroku.
 
 Once all of this is done, init a git repository and commmit
 
