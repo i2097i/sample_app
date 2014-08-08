@@ -24,5 +24,24 @@ Once all of this is done, init a git repository and commmit
 Then:
 $ rake db:migrate
 
+To run development:
+$ rails s
+
+open browser to localhost
+
+To run production:
+
+$ heroku create
+$ git push heroku master
+
+once this is finished:
+
+$ heroku open 
+
+or copy the given url into the browser. Should see contents of index.html page that was created in /public. 
+
+after this run:
 $ heroku run rake db:setup
 $ heroku rake db:migrate
+
+Start developing your models and shit.
