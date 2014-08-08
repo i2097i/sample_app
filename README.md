@@ -16,6 +16,7 @@ $ rails new sample_app -T
 ```
 # Configure Gemfile for heroku deployment:
 
+```
 group :development do
 	gem 'sqlite3' # will not work in heroku
 	gem 'rspec-rails'
@@ -28,6 +29,7 @@ group :production do
 end
 
 gem 'rails_12factor' # needed for heroku
+```
 
 Also, create a new file public/index.html as there is no default root route for production
 set by the 'rails new' command. It will work on your local system but not on heroku.
