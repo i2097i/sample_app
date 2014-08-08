@@ -68,7 +68,7 @@ controllers/pages_controler.rb:
 	end
 config/routes.rb:
 	get 'pages/home'
-	get 'pages/contact
+	get 'pages/contact'
 views/pages/home.html.erb (contains dummy html)
 views/pages/contact.html.erb (contains dummy html)
 
