@@ -32,7 +32,8 @@ gem 'rails_12factor' # needed for heroku
 ```
 
 Also, create a new file public/index.html as there is no default root route for production
-set by the 'rails new' command. It will work on your local system but not on heroku.
+set by the 'rails new' command. It will work on your local system but not on heroku. Creating the index.html
+file is just so it will quickly deploy successfully. Once a controller is made I am going to remove it.
 
 Once all of this is done, init a git repository and commmit
 
@@ -89,7 +90,15 @@ views/pages/contact.html.erb (contains dummy html)
 
 ###NOTE: to manually add a static page, must create all of the above. Also need to make a test/tests for that
 page in the spec/controllers/%correct_controller_spec%.rb file.
- 
+
+Once the controller is created add
+
+```
+root 'pages#home'
+```
+
+to the routes.rb and delete /public/index.html. This should set /pages/home to be the root.
+
 ***
 
 # TESTS - using rspec, growl, and autotest
@@ -131,3 +140,21 @@ to re-generate my 'spec_helper' and 'rails_helper' files. For some reason they d
 with my installation of rspec? Not sure. Either way it works.
 
 running ```$autotest``` does not yet work however...neither does growl notifications.
+
+### Issue checking html for title element
+
+I was trying to test that the correct title was present in each page. For some reason or
+another everybody had their own way of doing this.. I had to replace 
+
+```
+expect(response).should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Home")
+```
+with
+
+```
+assert_select "title", "Ruby on Rails Tutorial Sample App | About"
+``` 
+in my pages_controller_spec.rb file. This corrected the problem and my tests run properly now.
+
+
+
