@@ -99,6 +99,12 @@ root 'pages#home'
 
 to the routes.rb and delete /public/index.html. This should set /pages/home to be the root.
 
+## DRY embedded ruby
+
+For each of the static pages, write the embedded html content for the body tag only. In layouts/application.html.erb,
+define the base html that is common to all of the pages. Use the <%= yield %> tag in the body to inject correct 
+content from the individual page html.erb files.
+
 ***
 
 # TESTS - using rspec, growl, and autotest
@@ -141,7 +147,19 @@ with my installation of rspec? Not sure. Either way it works.
 
 running ```$autotest``` does not yet work however...neither does growl notifications.
 
-### Issue checking html for title element
+***
+
+# ISSUES
+
+* Heroku ssh issue with connection
+	I am using multiple ssh keys on my system and by default it uses the id_rsa creds for heroku, need
+	to run:
+	```
+	$ ssh-add ~/.ssh/%my_other_ssh_key%
+	```
+	to gain access to heroku remote repository.
+
+* Issue checking html for title element
 
 I was trying to test that the correct title was present in each page. For some reason or
 another everybody had their own way of doing this.. I had to replace 
@@ -155,6 +173,4 @@ with
 assert_select "title", "Ruby on Rails Tutorial Sample App | About"
 ``` 
 in my pages_controller_spec.rb file. This corrected the problem and my tests run properly now.
-
-
 
