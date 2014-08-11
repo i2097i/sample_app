@@ -151,7 +151,7 @@ running ```$autotest``` does not yet work however...neither does growl notificat
 
 # ISSUES
 
-* Heroku ssh issue with connection
+#####Heroku ssh issue with connection
 	I am using multiple ssh keys on my system and by default it uses the id_rsa creds for heroku, need
 	to run:
 	```
@@ -159,7 +159,7 @@ running ```$autotest``` does not yet work however...neither does growl notificat
 	```
 	to gain access to heroku remote repository.
 
-* Issue checking html for title element
+#####Issue checking html for title element
 
 I was trying to test that the correct title was present in each page. For some reason or
 another everybody had their own way of doing this.. I had to replace 
