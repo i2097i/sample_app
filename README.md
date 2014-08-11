@@ -160,7 +160,6 @@ running ```$autotest``` does not yet work however...neither does growl notificat
 	to gain access to heroku remote repository.
 
 #####Issue checking html for title element
-
 I was trying to test that the correct title was present in each page. For some reason or
 another everybody had their own way of doing this.. I had to replace 
 
