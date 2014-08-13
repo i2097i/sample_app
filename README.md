@@ -173,3 +173,16 @@ assert_select "title", "Ruby on Rails Tutorial Sample App | About"
 ``` 
 in my pages_controller_spec.rb file. This corrected the problem and my tests run properly now.
 
+##### Routes match command diff between rails 3 & 4
+
+In rails 3 i suppost you don't need to specify a rest verb for a match route:
+```
+match '/contact', to: => 'pages#contact'
+```
+However in rails 4 you do:
+```
+match '/contact', to: 'pages#contact', via: [:get]
+```
+The syntax is also slightly different... starting to think I shouldn't have cheaped out
+on the tutorial book. $4 vs $40...hard to turn it down. Whatevs.
+
