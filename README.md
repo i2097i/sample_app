@@ -3,7 +3,7 @@
 #### NOTE: I am only writing this for my own goddamn benefit. If it helps anybody else along the way...fine. 
 
 ##### Links:
-* [Latest Heroku Deployment Of This Project](http://agile-dawn-6413.herokuapp.com/pages/contact)
+* [Latest Heroku Deployment Of This Project](http://agile-dawn-6413.herokuapp.com)
 * [Using RoR 3 Tutorial by Michael Hartl](http://www.railstutorial.org/)
 
 ***
