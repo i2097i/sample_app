@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe PagesController, :type => :controller do
   render_views
 
-  before(:each) do
-    @base_title = "Ruby on Rails Tutorial Sample App"
-  end
+  #before(:each) do
+  #  @base_title = "Ruby on Rails Tutorial Sample App"
+  #end
 
   describe "GET home" do
     it "returns http success" do
@@ -15,7 +15,7 @@ RSpec.describe PagesController, :type => :controller do
 
     it "should have the right title" do
       get 'home'
-      assert_select "title",@base_title + " | Home"
+      assert_select "title", "Home"
     end
   end
 
@@ -27,7 +27,7 @@ RSpec.describe PagesController, :type => :controller do
 
     it "should have the right title" do
       get 'contact'
-      assert_select "title", @base_title + " | Contact"
+      assert_select "title",  "Contact"
     end
   end
 
@@ -39,7 +39,7 @@ RSpec.describe PagesController, :type => :controller do
 
     it "should have the right title" do
       get 'about'
-      assert_select "title", @base_title + " | About"
+      assert_select "title",  "About"
     end
   end
 
@@ -51,7 +51,7 @@ RSpec.describe PagesController, :type => :controller do
 
     it "should have the right title" do
       get 'help'
-      assert_select "title", @base_title + " | Help"
+      assert_select "title",  "Help"
     end
   end
 
