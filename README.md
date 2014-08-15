@@ -63,6 +63,13 @@ after this run:
 $ heroku run rake db:setup
 $ heroku rake db:migrate
 ```
+
+
+Note: to watch heroku logs: 
+
+```
+$ heroku logs --t --a %yourappnamehere%
+```
 Start developing your models and shit.
 
 ***
