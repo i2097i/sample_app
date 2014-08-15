@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  resources :users
 
   root :to => 'pages#home'
   match '/contact', to: 'pages#contact', via: [:get]

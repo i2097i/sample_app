@@ -149,6 +149,31 @@ running ```$autotest``` does not yet work however...neither does growl notificat
 
 ***
 
+# Generating Models
+
+## No Scaffolding
+
+To generate a User model not using the rails scaffolding execute: 
+
+```
+$ rails generate model User name:string email:string
+```
+Since I am using rspec, this also generates tests in the /spec folder.
+
+I also added the 
+
+```
+gem 'annotate'
+``` 
+to my development group in my Gemfile. Run:
+
+```
+$ annotate
+``` 
+from Terminal to annotate the model class with the database table structure. Helpful? We will see.
+
+***
+
 # ISSUES
 
 #####Heroku ssh issue with connection
