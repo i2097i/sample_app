@@ -64,6 +64,16 @@ $ heroku run rake db:setup
 $ heroku rake db:migrate
 ```
 
+##### Adding remotes to your .git/config:
+
+This allows you to specify a name for a given remote repository:
+
+```
+[remote "desiredNameOfRemote"]
+        fetch = +refs/heads/*:refs/remotes/heroku/*
+        url = git@heroku.com:name-of-repository.git
+```
+
 
 Note: to watch heroku logs: 
 
