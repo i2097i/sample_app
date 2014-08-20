@@ -15,6 +15,10 @@ group :production do
 	gem 'webrat'
 end
 
+group :test do
+	gem 'factory_girl_rails'
+end
+
 gem 'rails_12factor'
 
 # Use SCSS for stylesheets
