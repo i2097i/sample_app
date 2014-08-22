@@ -48,8 +48,16 @@ $ rails s
 open browser to localhost
 
 To run production:
+
+Note: to see list of your heroku apps:
+
+```
+$heroku apps
+```
+
 ```
 $ heroku create
+$ heroku git:remote -a yourappnamehere
 $ git push heroku master
 ```
 once this is finished:
