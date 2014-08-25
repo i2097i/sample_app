@@ -55,6 +55,7 @@ Note: to see list of your heroku apps:
 $heroku apps
 ```
 
+To create:
 ```
 $ heroku create
 $ heroku git:remote -a yourappnamehere
@@ -81,7 +82,18 @@ This allows you to specify a name for a given remote repository:
         fetch = +refs/heads/*:refs/remotes/heroku/*
         url = git@heroku.com:name-of-repository.git
 ```
+##### Push a specific branch to heroku:
 
+```
+$ git push nameOfRemote yourbranch:master
+```
+
+To clear heroku cache: 
+
+```
+$ heroku run console
+> Rails.cache.clear
+```
 
 Note: to watch heroku logs: 
 
