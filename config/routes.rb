@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => 'pages#home'
   match '/contact', to: 'pages#contact', via: [:get]
   match '/about', to: 'pages#about', via: [:get]
   match '/help', to: 'pages#help', via: [:get]
   match '/signup', to: 'users#new', via: [:get]
+  match '/signin', to: 'sessions#new', via: [:get]
+  match '/signout', to: 'sessions#destroy', via: [:get]
   
   #get 'pages/home'
   #get 'pages/contact'

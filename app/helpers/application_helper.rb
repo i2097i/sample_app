@@ -4,7 +4,7 @@ module ApplicationHelper
 	end
 
 	def title
-		if @title.empty?
+		if @title.nil?
 			"empty"
 		else
 			@title
