@@ -9,7 +9,7 @@ RSpec.describe SessionsController, :type => :controller do
     end
 
     it "should have the right title" do
-      get :new
+      get 'new'
       assert_select "title", "Sign In"
     end
   end
