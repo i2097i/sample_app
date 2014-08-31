@@ -7,6 +7,7 @@ group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate'
+  gem 'faker'
 end
 
 group :production do
