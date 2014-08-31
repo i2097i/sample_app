@@ -180,7 +180,7 @@ $ bin/rails generate rspec:install
 to re-generate my 'spec_helper' and 'rails_helper' files. For some reason they did not exist
 with my installation of rspec? Not sure. Either way it works.
 
-running ```$autotest``` does not yet work however...neither does growl notifications.
+running ```$autotest``` does not yet work however...neither do growl notifications.
 
 ***
 
@@ -237,7 +237,7 @@ in my pages_controller_spec.rb file. This corrected the problem and my tests run
 
 ##### Routes match command diff between rails 3 & 4
 
-In rails 3 i suppost you don't need to specify a rest verb for a match route:
+In rails 3 i suppose you don't need to specify a rest verb for a match route:
 ```
 match '/contact', to: => 'pages#contact'
 ```
