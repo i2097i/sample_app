@@ -7,7 +7,6 @@ group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate'
-  gem 'faker'
 end
 
 group :production do
@@ -21,6 +20,8 @@ group :test do
 end
 
 gem 'rails_12factor'
+
+gem 'faker'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
