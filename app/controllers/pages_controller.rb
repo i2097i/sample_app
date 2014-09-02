@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   
   def home
   	@title = "Home"
+    @micropost = Micropost.new if signed_in?
+    @feed_items = current_user ? current_user.feed : []
   end
   
   def contact
