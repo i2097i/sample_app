@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @microposts = @user.microposts.order('created_at DESC')
   	@title = @user.name
   end
 
@@ -56,10 +57,6 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,:password_confirmation)
-    end
-
-    def authenticate
-      deny_access unless signed_in?
     end
 
     def correct_user
