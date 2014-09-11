@@ -98,6 +98,12 @@ Note: to watch heroku logs:
 ```
 $ heroku logs --t --a %yourappnamehere%
 ```
+
+Note: To list heroku env variables:
+```
+$ heroku config --a we-identify-staging
+```
+
 Start developing your models and shit.
 
 ***
